@@ -1,4 +1,3 @@
-"""Загрузка и сохранение списка задач в JSON."""
 import json
 from pathlib import Path
 
@@ -6,7 +5,6 @@ DATA_FILE = Path(__file__).with_name("tasks.json")
 
 
 def load_tasks():
-    """Загружает задачи; при отсутствии или ошибке возвращает пустой список."""
     if not DATA_FILE.exists():
         return []
     try:
@@ -21,7 +19,6 @@ def load_tasks():
 
 
 def save_tasks(tasks):
-    """Сохраняет задачи и возвращает True при успехе."""
     try:
         with DATA_FILE.open("w", encoding="utf-8") as file:
             json.dump(tasks, file, ensure_ascii=False, indent=4)
