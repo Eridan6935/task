@@ -1,17 +1,3 @@
-"""
-История улучшений Task Manager:
-0.0.1 — создан главный цикл и консольное меню.
-0.0.2 — добавлено отображение списка задач.
-0.0.3 — добавлено создание задач.
-0.0.4 — добавлено редактирование задач.
-0.0.5 — добавлено удаление задач.
-0.0.6 — добавлены подтверждения действий.
-0.0.7 — добавлено сохранение задач в JSON.
-0.0.8 — добавлена загрузка задач при запуске.
-0.0.9 — код разделён на модули view, utils, core и storage.
-0.1.0 — обработаны некорректный ввод и ошибки чтения/записи файла.
-"""
-
 from view import show_menu, show_tasks, show_message
 from core import create_task, edit_task, delete_task
 from storage import load_tasks, save_tasks
@@ -19,7 +5,6 @@ from utils import check_confirm
 
 
 def main():
-    """Запускает консольный менеджер задач."""
     tasks = load_tasks()
 
     while True:
@@ -82,7 +67,6 @@ def main():
 
 
 def read_task_number(prompt):
-    """Безопасно читает номер задачи."""
     try:
         number = int(input(prompt).strip())
         if number < 1:
