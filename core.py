@@ -1,6 +1,3 @@
-"""Основная логика управления задачами."""
-
-
 def create_task(tasks, name):
     """Добавляет задачу. Возвращает False, если название пустое."""
     if not isinstance(name, str) or not name.strip():
@@ -10,7 +7,6 @@ def create_task(tasks, name):
 
 
 def edit_task(tasks, number, new_name):
-    """Редактирует задачу по номеру, начиная с 1."""
     if not isinstance(new_name, str) or not new_name.strip():
         return False
     if not isinstance(number, int) or number < 1 or number > len(tasks):
@@ -20,7 +16,6 @@ def edit_task(tasks, number, new_name):
 
 
 def delete_task(tasks, number):
-    """Удаляет задачу по номеру, начиная с 1."""
     if not isinstance(number, int) or number < 1 or number > len(tasks):
         return False
     del tasks[number - 1]
