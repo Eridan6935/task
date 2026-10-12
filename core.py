@@ -1,5 +1,4 @@
 def create_task(tasks, name):
-    """Добавляет задачу. Возвращает False, если название пустое."""
     if not isinstance(name, str) or not name.strip():
         return False
     tasks.append(name.strip())
