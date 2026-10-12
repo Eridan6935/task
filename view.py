@@ -1,8 +1,4 @@
-"""Функции отображения консольного интерфейса."""
-
-
 def show_menu():
-    """Показывает главное меню."""
     print("\n=== TASK MANAGER ===")
     print("1 — Посмотреть задачи")
     print("2 — Добавить задачу")
@@ -12,7 +8,6 @@ def show_menu():
 
 
 def show_tasks(tasks):
-    """Выводит задачи с нумерацией."""
     print("\n--- Список задач ---")
     if not tasks:
         print("Список задач пуст.")
@@ -23,5 +18,4 @@ def show_tasks(tasks):
 
 
 def show_message(message):
-    """Выводит сообщение пользователю."""
     print(message)
